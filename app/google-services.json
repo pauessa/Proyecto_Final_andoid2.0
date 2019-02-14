@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "397766453239",
+    "firebase_url": "https://proyectofinal-3872c.firebaseio.com",
+    "project_id": "proyectofinal-3872c",
+    "storage_bucket": "proyectofinal-3872c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397766453239:android:d79dfa642c731183",
+        "android_client_info": {
+          "package_name": "com.simarro.practicas.proyecto_final"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "397766453239-66ee7m9j6dkjib1516c8p82pl4kgj0sb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.simarro.practicas.proyecto_final",
+            "certificate_hash": "aa2a0ccd7f6e7a19271dab482cb9c426116c848b"
+          }
+        },
+        {
+          "client_id": "397766453239-j2c905u2r8jo4es0uff1qstf5htf14b9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1I_Y3Q7FSu5TbKPOzY_XZksyDzM5TLFc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "397766453239-0p3cqtvvagl03d0tdj0dbr9uf6gcofhm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
