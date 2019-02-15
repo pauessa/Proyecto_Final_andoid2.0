@@ -1249,6 +1249,12 @@ id direct
 id disableHome
 id down
 id drawer_layout
+id editText
+id editText2
+id editText3
+id editText4
+id editTextSaga
+id editTextTiulo
 id edit_query
 id emailinput
 id end
@@ -1269,7 +1275,9 @@ id ghost_view
 id gone
 id group_divider
 id groups
-id guideline
+id guideline4
+id guideline5
+id guideline6
 id home
 id homeAsUp
 id icon
@@ -1283,7 +1291,6 @@ id imagen
 id imgPortada
 id info
 id invisible
-id isbn
 id italic
 id item_touch_helper_previous_elevation
 id labeled
@@ -1364,6 +1371,7 @@ id snap
 id snapMargins
 id spacer
 id spinner
+id spinner2
 id split_action_bar
 id spread
 id spread_inside
@@ -1389,7 +1397,6 @@ id textStart
 id textView
 id textView2
 id textView4
-id textView5
 id textView6
 id textView8
 id text_input_password_toggle

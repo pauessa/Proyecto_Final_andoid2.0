@@ -55,8 +55,7 @@ public class DialogoBorrar extends DialogFragment {
                         String userID = mAuth.getCurrentUser().getUid();
                         mDatabase.child("Usuarios").child(userID).child("LibrosDeseados").child(l.getTitulo()).setValue(null);
                         dialog.cancel();
-                        //esto es para el commit
-                        Log.e("eeeeee","commmitttttt");
+
                     }
                 })
         .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
