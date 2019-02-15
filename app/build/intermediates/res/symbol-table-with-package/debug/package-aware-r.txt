@@ -683,6 +683,7 @@ color colorAccent
 color colorAmber
 color colorPrimary
 color colorPrimaryDark
+color colorPrueba
 color colorRed
 color colorSecondary
 color colorWhite
@@ -1217,6 +1218,8 @@ id btSignIn
 id btSignUp
 id btnDeseados
 id button
+id button2
+id button3
 id buttonPanel
 id cancel_action
 id center
@@ -1287,7 +1290,6 @@ id ifRoom
 id image
 id imageView
 id imageView2
-id imagen
 id imgPortada
 id info
 id invisible

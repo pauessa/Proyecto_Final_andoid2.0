@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#45802f</color>
+    <color name="colorPrimary">#5C473A</color>
+    <color name="colorPrimaryDark">#4E3829</color>
+    <color name="colorSecondary">#ffffff</color>
+    <color name="colorAccent">#5B7949</color>
+    <color name="colorRed">#ff2026</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorAmber">#FFC400</color>
+    <color name="btnPositivo">#FFC400</color>
+    <color name="btnNegativo">#1B0101</color>
+    <color name="colorPrueba">#305030</color>
+
+    <!--<color name="colorPrimary">#45802f</color>
     <color name="colorPrimaryDark">#255315</color>
     <color name="colorSecondary">#ffffff</color>
     <color name="colorAccent">#5dff40</color>
@@ -9,6 +20,6 @@
     <color name="colorAmber">#FFC400</color>
     <color name="btnPositivo">#FFC400</color>
     <color name="btnNegativo">#1B0101</color>
-
+    <color name="colorPrueba">#305030</color>-->
 
 </resources>

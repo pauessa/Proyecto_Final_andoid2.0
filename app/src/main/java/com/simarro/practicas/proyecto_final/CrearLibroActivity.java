@@ -45,11 +45,7 @@ import java.util.Date;
 import java.util.List;
 
 public class CrearLibroActivity extends AppCompatActivity {
-    private static final String CARPETA_PRINCIPAL = "misImagenesApp/";
-    private static final String CARPETA_IMAGEN = "imagenes";
-    private static final String DIRECTORIO_IMAGEN = CARPETA_PRINCIPAL + CARPETA_IMAGEN;
-    private String path;
-    File fileImagen;
+
     Bitmap bitmap;
     ImageView imgFoto;
     private static final int COD_SELECIONADA = 10;

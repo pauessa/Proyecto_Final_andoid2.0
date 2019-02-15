@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".CrearLibroActivity">
 
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,23 +28,33 @@
                 android:id="@+id/editTextTiulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:ems="10"
                 android:hint="Titulo"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:background="#C7C7C7"
                 android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/editTextSaga"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:ems="10"
                 android:hint="Saga"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:background="#C7C7C7"
                 android:inputType="textPersonName" />
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:background="#C7C7C7"
+                >
 
                 <android.support.constraint.Guideline
                     android:id="@+id/guideline4"
@@ -54,9 +67,6 @@
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
                     android:text="Autor:"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -66,14 +76,23 @@
                 <Spinner
                     android:id="@+id/spinner"
                     android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/button2"
+                    app:layout_constraintStart_toStartOf="@+id/guideline4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorAccent"
+                    android:src="@drawable/fab_add"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/guideline4"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </android.support.constraint.ConstraintLayout>
@@ -128,6 +147,10 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Sinopsis"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:background="#C7C7C7"
                 android:inputType="textMultiLine" />
 
             <EditText
@@ -136,11 +159,30 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Numero de paginas"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:background="#C7C7C7"
                 android:inputType="number" />
 
             <android.support.constraint.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:background="#C7C7C7">
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/colorAccent"
+                    android:src="@drawable/fab_add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <android.support.constraint.Guideline
                     android:id="@+id/guideline6"
@@ -153,9 +195,7 @@
                     android:id="@+id/textView8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
+
                     android:text="Editorial:"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -165,13 +205,11 @@
                 <Spinner
                     android:id="@+id/spinner2"
                     android:layout_width="0dp"
-                    android:layout_height="0dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/button3"
                     app:layout_constraintStart_toStartOf="@+id/guideline6"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -183,6 +221,10 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Lengua"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:background="#C7C7C7"
                 android:inputType="textPersonName" />
 
             <EditText
@@ -191,12 +233,18 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Genero"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:background="#C7C7C7"
                 android:inputType="textPersonName" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
 
                 <Button
                     android:id="@+id/BtnCancelar"
@@ -218,6 +266,7 @@
                     android:layout_marginBottom="8dp"
                     android:onClick="Crear"
                     android:text="Crear"
+                    android:background="@color/colorAccent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
             </RelativeLayout>
