@@ -1,17 +1,22 @@
 package com.simarro.practicas.proyecto_final;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -41,6 +46,7 @@ import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -64,16 +70,19 @@ public class CrearLibroActivity extends AppCompatActivity {
     EditText npag;
     EditText lengua;
     EditText genero;
+    TextView fecha;
 String portada;
 
 
     Autor autorSelecionado;
     Editorial editorialSelecionada;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_libro);
+
         this.setTitle("ISBN: "+getIntent().getStringExtra("ISBN"));
         autores = new ArrayList<>();
         editoriales =new ArrayList<>();
@@ -86,6 +95,7 @@ String portada;
         npag=findViewById(R.id.editText4);
         lengua=findViewById(R.id.editText);
         genero=findViewById(R.id.editText2);
+        fecha=findViewById(R.id.textView5);
         adapter = new AdapterSpinner(this,android.R.layout.simple_spinner_item, autores);
         adapterEditorial = new AdapterSpinnerEditorial(this,android.R.layout.simple_spinner_item, editoriales);
         spiner.setAdapter(adapter);
@@ -239,6 +249,7 @@ String portada;
                 }
                  adapter.notifyDataSetChanged();
 
+
             }
 
             @Override
@@ -250,22 +261,20 @@ String portada;
     }
 
     public void Crear(View v){
+        Autor a= (Autor) spiner.getSelectedItem();
+        Editorial ed= (Editorial) spinerEditorial.getSelectedItem();
         DatabaseReference mDatabase;
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference(); //Creamos una referencia al root de la base de datos
-
-
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
-        String dateInString = "19-12-1975 10:20:56";
-        Date date = null;
+        Date date1 = null;
         try {
-            date = sdf.parse(dateInString);
+            date1= new SimpleDateFormat("dd/MM/yyyy").parse(fecha.getText().toString());
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
 
-        Libro l = new Libro(titulo,autorSelecionado,Integer.parseInt(npag.getText().toString()), getIntent().getStringExtra("ISBN"), editorialSelecionada, date, sinopsis.getText().toString()   , saga.getText().toString(), lengua.getText().toString(), genero.getText().toString(), 10);
+        Libro l = new Libro(titulo,a,Integer.parseInt(npag.getText().toString()), getIntent().getStringExtra("ISBN"), ed, date1, sinopsis.getText().toString()   , saga.getText().toString(), lengua.getText().toString(), genero.getText().toString(), 10);
         l.setPortada(portada);
 
 
@@ -274,4 +283,41 @@ String portada;
 
     }
 
+    public void fecha(View v){
+        java.util.Calendar cal = java.util.Calendar.getInstance();
+        int year = cal.get(java.util.Calendar.YEAR);
+        int month = cal.get(java.util.Calendar.MONTH);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        DatePickerDialog dialog = new DatePickerDialog(
+                this,
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
+                                month = month + 1;
+                                Log.d("ggg", "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
+                                String date = month + "/" + day + "/" + year;
+                                fecha.setText(date);
+                            }
+                },year, month, day);
+
+        dialog.show();
+
+    }
+
+    public void crearAutor(View v){
+        Intent i=new Intent(this,CrearAutorActivity.class);
+        i.putExtra("ISBN",getIntent().getStringExtra("ISBN"));
+        startActivity(i);
+    }
+    public void crearEditorial(View v){
+        Intent i=new Intent(this,CrearEditorialActivity.class);
+        i.putExtra("ISBN",getIntent().getStringExtra("ISBN"));
+        i.putExtra("AUTOR",autorSelecionado);
+        startActivity(i);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 }

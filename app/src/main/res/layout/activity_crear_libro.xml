@@ -90,6 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
                     android:background="@color/colorAccent"
+                    android:onClick="crearAutor"
                     android:src="@drawable/fab_add"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -177,8 +178,9 @@
                     android:id="@+id/button5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Fecha"
-                    android:background="@color/colorAccent"/>
+                    android:background="@color/colorAccent"
+                    android:onClick="fecha"
+                    android:text="Fecha" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -201,6 +203,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
+                    android:onClick="crearEditorial"
                     android:background="@color/colorAccent"
                     android:src="@drawable/fab_add"
                     app:layout_constraintBottom_toBottomOf="parent"

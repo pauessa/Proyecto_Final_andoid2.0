@@ -1,8 +1,9 @@
 package com.simarro.practicas.proyecto_final.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Autor {
+public class Autor implements Serializable {
     private String nombre;
     private Date fechaNacimiento;
     private int numeroDeLibros;

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-35:12
+ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-36:12
 MERGED from [com.android.support:design:28.0.0] C:\Users\Pau\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\8fcc1b0c894396675fc90125039b1911\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Pau\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\963965b1f4d47691dc6c6dfd07d46cde\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Pau\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\799474d8dc76232b9ef7b57a3ff1551d\AndroidManifest.xml:2:1-11:12
@@ -64,20 +64,20 @@ MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Pau\.gradle\caches\
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Pau\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\8721bfdb474a7c82d3437a1679f87c59\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Pau\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\08977c13e51bd14a4fbf5b41dc6aa1c4\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Users\Pau\.gradle\caches\transforms-1\files-1.1\play-services-measurement-base-16.0.3.aar\8fb9effbc9676a983492ac6bb4e2bd2f\AndroidManifest.xml:2:1-9:12
-INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-35:12
-INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-36:12
 	package
 		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:3:5-51
 		INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-35:12
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-36:12
 		INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-35:12
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:1-36:12
 		INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:2:11-69
@@ -102,15 +102,15 @@ ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\Androi
 	android:name
 		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:6:22-62
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:7:5-80
+ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:7:5-81
 	android:name
 		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:7:22-78
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:8:5-79
+ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:8:5-80
 	android:name
 		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:8:22-77
 application
-ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:11:5-33:19
+ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:10:5-34:19
 MERGED from [com.android.support:design:28.0.0] C:\Users\Pau\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\8fcc1b0c894396675fc90125039b1911\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:28.0.0] C:\Users\Pau\.gradle\caches\transforms-1\files-1.1\design-28.0.0.aar\8fcc1b0c894396675fc90125039b1911\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Pau\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\799474d8dc76232b9ef7b57a3ff1551d\AndroidManifest.xml:9:5-20
@@ -168,49 +168,57 @@ MERGED from [com.google.android.gms:play-services-measurement-base:16.0.3] C:\Us
 	android:appComponentFactory
 		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Pau\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\24c156eb17afefee2c96a7b32edf65bf\AndroidManifest.xml:22:18-91
 	android:supportsRtl
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:13:9-41
 	android:roundIcon
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:14:9-43
 	android:icon
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:13:9-38
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:12:9-38
 	android:allowBackup
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:17:9-40
-activity#com.simarro.practicas.proyecto_final.CrearLibroActivity
-ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:18:9-65
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:16:9-40
+activity#com.simarro.practicas.proyecto_final.CrearEditorialActivity
+ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:17:9-69
+	android:name
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:17:19-57
+activity#com.simarro.practicas.proyecto_final.CrearAutorActivity
+ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:18:9-56
 	android:name
 		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:18:19-53
+activity#com.simarro.practicas.proyecto_final.CrearLibroActivity
+ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:19:9-56
+	android:name
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:19:19-53
 activity#com.simarro.practicas.proyecto_final.Scanner
-ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:19:9-45
+ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:20:9-45
 	android:name
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:19:19-42
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:20:19-42
 activity#com.simarro.practicas.proyecto_final.LoginActivity
-ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:20:9-29:20
+ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:21:9-30:20
 	android:label
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:22:13-45
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:23:13-45
 	android:theme
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:23:13-56
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:24:13-56
 	android:name
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:21:13-42
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:22:13-42
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:24:13-28:29
+ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:25:17-69
+ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:26:17-69
 	android:name
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:26:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:27:17-77
+ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:27:27-74
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:28:27-74
 activity#com.simarro.practicas.proyecto_final.MainActivity
-ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:30:9-32:59
+ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:31:9-33:59
 	android:theme
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:32:13-56
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:33:13-56
 	android:name
-		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:31:13-41
+		ADDED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml:32:13-41
 uses-sdk
 INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Pau\AndroidStudioProjects\Proyecto_final\app\src\main\AndroidManifest.xml
