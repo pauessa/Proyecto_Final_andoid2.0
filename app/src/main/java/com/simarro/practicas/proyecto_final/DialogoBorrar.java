@@ -58,11 +58,12 @@ public class DialogoBorrar extends DialogFragment {
 
                     }
                 })
-        .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                dialog.cancel();
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
 
-            }});
+
+                    }});
 
         return builder.create();
     }

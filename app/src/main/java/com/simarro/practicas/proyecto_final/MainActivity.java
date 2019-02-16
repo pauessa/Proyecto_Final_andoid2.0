@@ -158,6 +158,11 @@ public class MainActivity extends AppCompatActivity
                 fragment = new ListaDeseos();
 
                 break;
+            case R.id.nav_menu4:
+                fragment = new Menu5();
+
+                break;
+
         }
         if (fragment != null) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
@@ -231,7 +236,7 @@ public class MainActivity extends AppCompatActivity
         Date date3 = sdf.parse(dateInString);
         Libro l = new Libro("El Imperio Final", new Autor("Brandon Sanderson", date, 170, "Estados unidos", "Brandon Sanderson, es un escritor estadounidense de literatura fantástica. Nacido en Nebraska, Es mormón. Actualmente reside en Provo, Utah, con su mujer Emily, con la que contrajo matrimonio el 7 de julio de 2006")
                 , 672, "9788417347291", new Editorial("NOVA", date2), date3, "Durante mil años han caído las cenizas y nada florece. Durante mil años los skaa han sido esclavizados y viven sumidos en un miedo inevitable. Durante mil años el Lord Legislador reina con un poder absoluto gracias al terror, a sus poderes y a su inmortalidad. Le ayudan «obligadores» e «inquisidores», junto a la poderosa magia de la «alomancia». Pero los nobles han tenido a menudo trato sexual con jóvenes skaa y, aunque la ley lo prohíbe, algunos de sus bastardos han sobrevivido y heredado los poderes alománticos: son los «nacidos de la bruma» ('mistborns'). Ahora, Kelsier, el «superviviente», el único que ha logrado huir de los Pozos de Hathsin, ha encontrado a Vin, una pobre chica skaa con mucha suerte… Tal vez los dos unidos a la rebelión que los skaa intentan desde hace mil años puedan cambiar el mundo y la atroz dominación del Lord Legislador."
-                , "Mistborn", "Español", "Fantasia", 10);
+                , "Mistborn", "Español", "Fantasia", 5);
         l.setPortada("https://firebasestorage.googleapis.com/v0/b/proyectofinal-3872c.appspot.com/o/Books%2FEl%20imperio%20final.jpg?alt=media&token=3a982bea-3349-485f-a0ab-49e2cf87c998");
         DatabaseReference mDatabase;
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -239,11 +244,6 @@ public class MainActivity extends AppCompatActivity
 
         mDatabase.child("Libros").child(l.getIsbn()).setValue(l);
 
-         l = new Libro("El Imperio Final2", new Autor("sandra", date, 170, "Estados unidos", "Brandon Sanderson, es un escritor estadounidense de literatura fantástica. Nacido en Nebraska, Es mormón. Actualmente reside en Provo, Utah, con su mujer Emily, con la que contrajo matrimonio el 7 de julio de 2006")
-                , 672, "9788417347292", new Editorial("NOVA", date2), date3, "Durante mil años han caído las cenizas y nada florece. Durante mil años los skaa han sido esclavizados y viven sumidos en un miedo inevitable. Durante mil años el Lord Legislador reina con un poder absoluto gracias al terror, a sus poderes y a su inmortalidad. Le ayudan «obligadores» e «inquisidores», junto a la poderosa magia de la «alomancia». Pero los nobles han tenido a menudo trato sexual con jóvenes skaa y, aunque la ley lo prohíbe, algunos de sus bastardos han sobrevivido y heredado los poderes alománticos: son los «nacidos de la bruma» ('mistborns'). Ahora, Kelsier, el «superviviente», el único que ha logrado huir de los Pozos de Hathsin, ha encontrado a Vin, una pobre chica skaa con mucha suerte… Tal vez los dos unidos a la rebelión que los skaa intentan desde hace mil años puedan cambiar el mundo y la atroz dominación del Lord Legislador."
-                , "Mistborn", "Español", "Fantasia", 10);
-        l.setPortada("https://firebasestorage.googleapis.com/v0/b/proyectofinal-3872c.appspot.com/o/Books%2FEl%20imperio%20final.jpg?alt=media&token=3a982bea-3349-485f-a0ab-49e2cf87c998");
-        mDatabase.child("Libros").child(l.getIsbn()).setValue(l);
 
 
     }

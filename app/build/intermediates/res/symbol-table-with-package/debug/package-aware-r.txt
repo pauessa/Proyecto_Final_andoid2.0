@@ -1217,7 +1217,6 @@ id bottom
 id btSignIn
 id btSignUp
 id btnDeseados
-id button
 id button2
 id button3
 id button5
@@ -1281,6 +1280,8 @@ id ghost_view
 id gone
 id group_divider
 id groups
+id guideline
+id guideline2
 id guideline4
 id guideline5
 id guideline6
@@ -1511,6 +1512,7 @@ layout design_text_input_password_icon
 layout dialog_borrar
 layout dialog_personal
 layout item_deseados
+layout item_libros
 layout lista_deseos
 layout menu2
 layout menu3

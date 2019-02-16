@@ -134,6 +134,17 @@ String portada;
 
             }
         });
+
+
+
+        if (getIntent().getSerializableExtra("LIBRO")!=null){
+            Libro l= (Libro) getIntent().getSerializableExtra("LIBRO");
+            txtTitulo.setText(l.getTitulo());
+            saga.setText(l.getNombreSaga());
+            autorSelecionado=l.getAutor();
+            //spiner.setSelection(getIntent().getIntExtra("POSICION"));
+        }
+
     }
 
     private void mostrarEditoriales() {
@@ -261,8 +272,7 @@ String portada;
     }
 
     public void Crear(View v){
-        Autor a= (Autor) spiner.getSelectedItem();
-        Editorial ed= (Editorial) spinerEditorial.getSelectedItem();
+
         DatabaseReference mDatabase;
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference(); //Creamos una referencia al root de la base de datos
@@ -274,7 +284,7 @@ String portada;
         }
 
 
-        Libro l = new Libro(titulo,a,Integer.parseInt(npag.getText().toString()), getIntent().getStringExtra("ISBN"), ed, date1, sinopsis.getText().toString()   , saga.getText().toString(), lengua.getText().toString(), genero.getText().toString(), 10);
+        Libro l = new Libro(titulo,autorSelecionado,Integer.parseInt(npag.getText().toString()), getIntent().getStringExtra("ISBN"), editorialSelecionada, date1, sinopsis.getText().toString()   , saga.getText().toString(), lengua.getText().toString(), genero.getText().toString(), 10);
         l.setPortada(portada);
 
 
@@ -319,5 +329,17 @@ String portada;
     @Override
     protected void onResume() {
         super.onResume();
+
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Autor a=(Autor) spiner.getSelectedItem();
+        autorSelecionado=a;
+        Log.e("Autor",a.toString());
+        Editorial e=(Editorial) spinerEditorial.getSelectedItem();
+        editorialSelecionada=e;
+        Log.e("Autor",e.toString());
     }
 }
