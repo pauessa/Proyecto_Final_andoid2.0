@@ -7,4 +7,5 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="singOut">Desconectar</string>
     <string name="mapa">Mapa</string>
+    <string name="coordenades">geo:38.9370295,-0.4480719?q=Herrajes+Europeos+SL,+Carrer+Forn+del+Vidre+18,+Pol.+Ind.+Les+Foies,+46830+Benigànim,+Valencia</string>
 </resources>

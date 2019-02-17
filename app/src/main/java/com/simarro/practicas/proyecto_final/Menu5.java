@@ -1,6 +1,7 @@
 package com.simarro.practicas.proyecto_final;
 
 
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -39,13 +40,13 @@ public class Menu5 extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        CargarLibros cargar=new CargarLibros();
+        cargar.execute();
         getActivity().setTitle("Lista de libros");
        // guardarPrueba();
         rv = getView().findViewById(R.id.Recycler);
         rv.setLayoutManager(new LinearLayoutManager(getActivity()));
         libros = new ArrayList<>();
-
-        FirebaseDatabase db = FirebaseDatabase.getInstance();
 
         adapterTodos = new AdapterTodos(libros, new AdapterTodos.OnItemClickListener() {
             @Override
@@ -58,29 +59,8 @@ public class Menu5 extends Fragment {
             }
         });
         rv.addItemDecoration(new DividerItemDecoration(rv.getContext(), DividerItemDecoration.VERTICAL));
-
         rv.setAdapter(adapterTodos);
 
-        //Leer BBDD
-        String userID = mAuth.getCurrentUser().getUid();
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        database.getReference().child("Libros").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                libros.removeAll(libros);
-                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    Libro l = ds.getValue(Libro.class);
-                    libros.add(l);
-                    Log.e("EEEE", l.toString());
-                }
-                adapterTodos.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
     }
 
 
@@ -104,6 +84,33 @@ public class Menu5 extends Fragment {
         mDatabase.child("Usuarios").child(userID).child("LibrosDeseados").child(l.getTitulo()).setValue(l);
 
 
+    }
+
+
+    private class CargarLibros extends AsyncTask<Void,Void,Void>{
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            database.getReference().child("Libros").addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    libros.removeAll(libros);
+                    for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                        Libro l = ds.getValue(Libro.class);
+                        libros.add(l);
+                        Log.e("EEEE", l.toString());
+                    }
+                    adapterTodos.notifyDataSetChanged();
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+            return null;
+        }
     }
 
 

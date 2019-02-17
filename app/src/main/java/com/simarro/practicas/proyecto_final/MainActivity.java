@@ -141,8 +141,8 @@ public class MainActivity extends AppCompatActivity
             return true;
         }
         if (id == R.id.action_mapa) {
-            FirebaseAuth.getInstance().signOut();
-            Intent i = new Intent(this, LoginActivity.class);
+
+            Intent i = new Intent(this, MapaActivity.class);
             startActivity(i);
             return true;
         }

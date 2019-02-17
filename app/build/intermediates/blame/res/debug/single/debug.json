@@ -8,12 +8,12 @@
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
-        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
-        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
-    },
-    {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable_el_imperio_final.png.flat",
         "source": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\src\\main\\res\\drawable\\el_imperio_final.png"
+    },
+    {
+        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_focused_holo.9.png.flat",
+        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
     },
     {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light_normal.xml.flat",
@@ -60,12 +60,12 @@
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\8fcc1b0c894396675fc90125039b1911\\res\\color\\mtrl_btn_bg_color_selector.xml"
     },
     {
-        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_action_bar_item_background_material.xml.flat",
-        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_edit_text_material.xml.flat",
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_action_bar_item_background_material.xml.flat",
+        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
     },
     {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_media_custom.xml.flat",
@@ -100,12 +100,12 @@
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-xxhdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action_tombstone.xml.flat",
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\24c156eb17afefee2c96a7b32edf65bf\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-xxhdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable_mtrl_tabs_default_indicator.xml.flat",
@@ -116,12 +116,12 @@
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\8fcc1b0c894396675fc90125039b1911\\res\\drawable-xxhdpi-v4\\design_ic_visibility.png"
     },
     {
-        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
-        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-xhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_spinner_mtrl_am_alpha.9.png.flat",
+        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-ldrtl-hdpi-v17\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_bar.xml.flat",
@@ -148,12 +148,12 @@
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-mdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
     },
     {
-        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_textfield_search_material.xml.flat",
-        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable\\abc_textfield_search_material.xml"
-    },
-    {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_check_to_on_mtrl_015.png.flat",
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-xhdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_textfield_search_material.xml.flat",
+        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_avd_show_password.xml.flat",
@@ -188,12 +188,12 @@
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\8fcc1b0c894396675fc90125039b1911\\res\\animator\\mtrl_btn_unelevated_state_list_anim.xml"
     },
     {
-        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
-    },
-    {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_material.xml.flat",
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_mtrl_chip_checked_black.xml.flat",
@@ -212,12 +212,12 @@
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-xxxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
-        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
-        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\7d3ac39de9c0bbcfa335dec74460234d\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
-    },
-    {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_chip_background_color.xml.flat",
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\8fcc1b0c894396675fc90125039b1911\\res\\color\\mtrl_chip_background_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
+        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\7d3ac39de9c0bbcfa335dec74460234d\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_dark_normal_background.9.png"
     },
     {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
@@ -244,12 +244,12 @@
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
-        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
-    },
-    {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
+        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
@@ -328,12 +328,12 @@
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-xxhdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
-        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
-        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
-    },
-    {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_crear_editorial.xml.flat",
         "source": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\src\\main\\res\\layout\\activity_crear_editorial.xml"
+    },
+    {
+        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
+        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-xxxhdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_btn_radio_to_on_mtrl_015.png.flat",
@@ -352,12 +352,12 @@
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\fab-1.6.4.aar\\b09da41de584fbb3f462d7ecc872cd63\\res\\drawable-hdpi-v4\\fab_add.png"
     },
     {
-        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
-        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_switch_track_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-mdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
+        "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_menu.xml.flat",
@@ -2302,6 +2302,10 @@
     {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_off_mtrl_alpha.png.flat",
         "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\963965b1f4d47691dc6c6dfd07d46cde\\res\\drawable-hdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_mapa.xml.flat",
+        "source": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\src\\main\\res\\layout\\activity_mapa.xml"
     },
     {
         "merged": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_text_select_handle_middle_mtrl_dark.png.flat",
