@@ -17,6 +17,7 @@ public class Libro implements Serializable {
     private String lengua;
     private String genero;
     private int valoracionMedia;
+    private int pos;
 
     public Libro() {
 
@@ -37,6 +38,14 @@ public class Libro implements Serializable {
         this.lengua = lengua;
         this.genero = genero;
         this.valoracionMedia = valoracionMedia;
+    }
+
+    public int getPos() {
+        return pos;
+    }
+
+    public void setPos(int pos) {
+        this.pos = pos;
     }
 
     public String getPortada() {

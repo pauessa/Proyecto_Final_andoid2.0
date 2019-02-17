@@ -4,6 +4,7 @@ package com.simarro.practicas.proyecto_final;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -49,11 +50,15 @@ public class Menu5 extends Fragment {
         adapterTodos = new AdapterTodos(libros, new AdapterTodos.OnItemClickListener() {
             @Override
             public void onItemClick(Libro item) {
+                int i=adapterTodos.getItemSelected();
                 DialogoEditar dialogo = new DialogoEditar();
                 dialogo.setLibro(item);
+                dialogo.setpos(item.getPos());
                 dialogo.show(getFragmentManager(), "ff");
             }
         });
+        rv.addItemDecoration(new DividerItemDecoration(rv.getContext(), DividerItemDecoration.VERTICAL));
+
         rv.setAdapter(adapterTodos);
 
         //Leer BBDD

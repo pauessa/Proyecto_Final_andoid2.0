@@ -140,6 +140,12 @@ public class MainActivity extends AppCompatActivity
             startActivity(i);
             return true;
         }
+        if (id == R.id.action_mapa) {
+            FirebaseAuth.getInstance().signOut();
+            Intent i = new Intent(this, LoginActivity.class);
+            startActivity(i);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }

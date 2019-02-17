@@ -47,7 +47,7 @@ public class CrearEditorialActivity extends AppCompatActivity {
                     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                         month = month + 1;
                         Log.d("ggg", "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
-                        String date =day  + "/" + month + "/" + year;
+                        String date = day + "/" + month + "/" + year;
                         fecha.setText(date);
                     }
                 }, year, month, day);

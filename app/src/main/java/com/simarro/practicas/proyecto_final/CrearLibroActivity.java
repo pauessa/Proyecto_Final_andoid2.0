@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,6 +44,7 @@ import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -71,7 +73,8 @@ public class CrearLibroActivity extends AppCompatActivity {
     EditText lengua;
     EditText genero;
     TextView fecha;
-String portada;
+    String portada;
+    RatingBar mRatingBar;
 
 
     Autor autorSelecionado;
@@ -86,6 +89,7 @@ String portada;
         this.setTitle("ISBN: "+getIntent().getStringExtra("ISBN"));
         autores = new ArrayList<>();
         editoriales =new ArrayList<>();
+        mRatingBar=  findViewById(R.id.ratingBar);
         spiner=findViewById(R.id.spinner);
         spinerEditorial=findViewById(R.id.spinner2);
         storage = FirebaseStorage.getInstance();
@@ -96,6 +100,7 @@ String portada;
         lengua=findViewById(R.id.editText);
         genero=findViewById(R.id.editText2);
         fecha=findViewById(R.id.textView5);
+        imgFoto=findViewById(R.id.imageView2);
         adapter = new AdapterSpinner(this,android.R.layout.simple_spinner_item, autores);
         adapterEditorial = new AdapterSpinnerEditorial(this,android.R.layout.simple_spinner_item, editoriales);
         spiner.setAdapter(adapter);
@@ -142,7 +147,19 @@ String portada;
             txtTitulo.setText(l.getTitulo());
             saga.setText(l.getNombreSaga());
             autorSelecionado=l.getAutor();
-            //spiner.setSelection(getIntent().getIntExtra("POSICION"));
+            spiner.setSelection(getIntent().getIntExtra("POSICION",0));
+            spinerEditorial.setSelection(getIntent().getIntExtra("POSICION",0));
+            sinopsis.setText(l.getSinopsis());
+            npag.setText(Integer.toString(l.getnPaginas()));
+            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            Log.e("aaaaa",l.getFechaLanzamiento()+"");
+            String strDate = dateFormat.format(l.getFechaLanzamiento());
+            fecha.setText(strDate);
+            mRatingBar.setRating(l.getValoracionMedia());
+            lengua.setText(l.getLengua());
+            genero.setText(l.getGenero());
+            Picasso.get().load(l.getPortada()).into(imgFoto);
+            portada=l.getPortada();
         }
 
     }
@@ -200,7 +217,6 @@ String portada;
         switch (requestCode) {
 
             case COD_FOTO:
-                imgFoto = findViewById(R.id.imageView2);
                 bitmap = (Bitmap) data.getExtras().get("data");
                 //imgFoto.setImageBitmap(bitmap);
                 Uri uri = data.getData();
@@ -282,9 +298,9 @@ String portada;
         } catch (ParseException e) {
             e.printStackTrace();
         }
+        Log.e("aaaaa",date1+"");
 
-
-        Libro l = new Libro(titulo,autorSelecionado,Integer.parseInt(npag.getText().toString()), getIntent().getStringExtra("ISBN"), editorialSelecionada, date1, sinopsis.getText().toString()   , saga.getText().toString(), lengua.getText().toString(), genero.getText().toString(), 10);
+        Libro l = new Libro(txtTitulo.getText().toString(),autorSelecionado,Integer.parseInt(npag.getText().toString()), getIntent().getStringExtra("ISBN"), editorialSelecionada, date1, sinopsis.getText().toString()   , saga.getText().toString(), lengua.getText().toString(), genero.getText().toString(), (int)mRatingBar.getRating());
         l.setPortada(portada);
 
 
@@ -304,8 +320,7 @@ String portada;
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                                 month = month + 1;
-                                Log.d("ggg", "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
-                                String date = month + "/" + day + "/" + year;
+                                String date = day + "/" + month + "/" + year;
                                 fecha.setText(date);
                             }
                 },year, month, day);

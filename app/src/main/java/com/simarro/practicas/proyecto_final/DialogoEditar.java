@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,10 +24,13 @@ public class DialogoEditar extends DialogFragment {
     DatabaseReference mDatabase;
 
     ZXingScannerView v;
+    int pos;
     public void setLibro(Libro l){
         this.l=l;
     }
-
+    public void setpos(int pos){
+        this.pos=pos;
+    }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -62,6 +66,8 @@ public class DialogoEditar extends DialogFragment {
                         Intent i =new Intent(getContext(),CrearLibroActivity.class);
                         i.putExtra("ISBN",l.getIsbn());
                         i.putExtra("LIBRO",l);
+                        i.putExtra("POSICION",pos);
+                        Log.e("TEST",pos+"");
                         startActivity(i);
 
                     }});

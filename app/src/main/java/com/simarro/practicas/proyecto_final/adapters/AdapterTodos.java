@@ -18,6 +18,7 @@ public class AdapterTodos extends RecyclerView.Adapter<AdapterTodos.Libroviewhol
 
     List<Libro> libros;
     private final OnItemClickListener listener;
+int pos;
 
     public AdapterTodos(List<Libro> libros, OnItemClickListener listener) {
         this.libros = libros;
@@ -35,6 +36,7 @@ public class AdapterTodos extends RecyclerView.Adapter<AdapterTodos.Libroviewhol
     @Override
     public void onBindViewHolder(Libroviewholder libroviewholder, int i) {
         final Libro l=libros.get(i);
+        l.setPos(i);
         libroviewholder.titulo.setText(l.getTitulo());
         Picasso.get().load(l.getPortada()).into( libroviewholder.portada);
         libroviewholder.autor.setText(l.getAutor().getNombre());
@@ -75,5 +77,8 @@ public class AdapterTodos extends RecyclerView.Adapter<AdapterTodos.Libroviewhol
     }
     public interface OnItemClickListener {
         void onItemClick(Libro item);
+    }
+    public int getItemSelected(){
+        return pos;
     }
 }
