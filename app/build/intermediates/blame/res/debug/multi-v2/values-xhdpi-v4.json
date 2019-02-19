@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Pau\\AndroidStudioProjects\\Proyecto_final\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+            "outputFile": "C:\\Users\\Pauessa\\AndroidStudioProjects\\Proyecto_Final\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xhdpi-v4\\values-xhdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Pau\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.9.aar\\20aeaab7adc4b9ced9152c9bc3b342f8\\res\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+                    "source": "C:\\Users\\Pauessa\\.gradle\\caches\\transforms-1\\files-1.1\\core-1.9.aar\\0fb097e9481e1ba1717f4e1c8b51486b\\res\\values-xhdpi-v4\\values-xhdpi-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

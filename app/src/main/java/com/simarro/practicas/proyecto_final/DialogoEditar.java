@@ -59,8 +59,7 @@ public class DialogoEditar extends DialogFragment {
                         dialog.cancel();
 
                     }
-                })
-                .setNegativeButton("Editar", new DialogInterface.OnClickListener() {
+                }).setNegativeButton("Editar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
                         Intent i =new Intent(getContext(),CrearLibroActivity.class);

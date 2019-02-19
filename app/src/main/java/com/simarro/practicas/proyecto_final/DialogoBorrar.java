@@ -57,8 +57,14 @@ public class DialogoBorrar extends DialogFragment {
                         dialog.cancel();
 
                     }
-                })
-                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                }).setNeutralButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+
+            }
+        })
+                .setNegativeButton("Mover a leiendo", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
 
