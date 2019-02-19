@@ -59,7 +59,16 @@ public class DialogoEditar extends DialogFragment {
                         dialog.cancel();
 
                     }
-                }).setNegativeButton("Editar", new DialogInterface.OnClickListener() {
+                }).setNeutralButton("Añadir a deseados", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                String userID = mAuth.getCurrentUser().getUid();
+                FirebaseDatabase database=FirebaseDatabase.getInstance();
+                database.getReference().child("Usuarios").child(userID).child("LibrosDeseados").child(l.getTitulo()).setValue(l);
+                dialog.cancel();
+
+            }
+        }).setNegativeButton("Editar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
                         Intent i =new Intent(getContext(),CrearLibroActivity.class);

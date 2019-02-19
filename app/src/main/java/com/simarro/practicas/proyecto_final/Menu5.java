@@ -64,27 +64,7 @@ public class Menu5 extends Fragment {
     }
 
 
-    private void guardarPrueba() {
 
-        DatabaseReference mDatabase;
-
-
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference(); //Creamos una referencia al root de la base de datos
-        String userID = mAuth.getCurrentUser().getUid();
-
-        Libro l = new Libro("hola");
-        //l.setPortada(R.drawable.nocover);
-        mDatabase.child("Usuarios").child(userID).child("LibrosDeseados").child(l.getTitulo()).setValue(l);
-        l = new Libro("hola2");
-        // l.setPortada(R.drawable.nocover);
-        mDatabase.child("Usuarios").child(userID).child("LibrosDeseados").child(l.getTitulo()).setValue(l);
-        l = new Libro("hola3");
-        // l.setPortada(R.drawable.nocover);
-        mDatabase.child("Usuarios").child(userID).child("LibrosDeseados").child(l.getTitulo()).setValue(l);
-
-
-    }
 
 
     private class CargarLibros extends AsyncTask<Void,Void,Void>{

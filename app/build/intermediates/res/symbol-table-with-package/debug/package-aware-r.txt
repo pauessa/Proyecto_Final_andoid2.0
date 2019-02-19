@@ -31,6 +31,8 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array codigopais
+array idiomas
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -1190,6 +1192,7 @@ id action_bar_subtitle
 id action_bar_title
 id action_container
 id action_context_bar
+id action_desconectar
 id action_divider
 id action_image
 id action_mapa
@@ -1198,7 +1201,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_settings
+id action_preferencias
 id action_text
 id actions
 id activity_chooser_view_content
@@ -1218,6 +1221,8 @@ id bottom
 id btSignIn
 id btSignUp
 id btnDeseados
+id btnLeyendo
+id btnLibros
 id button2
 id button3
 id button5
@@ -1233,6 +1238,7 @@ id clip_horizontal
 id clip_vertical
 id collapseActionView
 id constrainLeidos
+id constrainLeyendo
 id container
 id content
 id contentPanel
@@ -1340,6 +1346,8 @@ id parent_matrix
 id passwordinput
 id percent
 id pin
+id porcentaje
+id porcentaje2
 id progressBar
 id progress_circular
 id progress_horizontal
@@ -1495,7 +1503,6 @@ layout activity_crear_editorial
 layout activity_crear_libro
 layout activity_login
 layout activity_main
-layout activity_mapa
 layout activity_scanner
 layout app_bar_main
 layout content_main
@@ -1516,6 +1523,7 @@ layout design_text_input_password_icon
 layout dialog_borrar
 layout dialog_personal
 layout item_deseados
+layout item_leyendo
 layout item_libros
 layout lista_deseos
 layout menu2
@@ -1633,6 +1641,7 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string preferencias
 string project_id
 string search_menu_title
 string singOut
@@ -2222,3 +2231,4 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml opciones

@@ -63,6 +63,7 @@ public class Scanner extends AppCompatActivity implements ZXingScannerView.Resul
                                 Libro l = dataSnapshot.getValue(Libro.class);
                                 DialogoScanner dialogo = new DialogoScanner();
                                 dialogo.setLibro(l);
+                                dialogo.setTipo(getIntent().getStringExtra("TIPO"));
                                 dialogo.show(getSupportFragmentManager(), "ff");
 
                         }
@@ -91,7 +92,7 @@ public class Scanner extends AppCompatActivity implements ZXingScannerView.Resul
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                Toast.makeText(getApplicationContext(),"cancelado",Toast.LENGTH_SHORT).show();
             }
         });
 

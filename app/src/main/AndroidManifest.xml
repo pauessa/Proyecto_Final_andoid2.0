@@ -15,8 +15,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MapaActivity"></activity>
         <activity android:name=".CrearEditorialActivity" />
+        <activity android:name=".OpcionesActivity" />
         <activity android:name=".CrearAutorActivity" />
         <activity android:name=".CrearLibroActivity" />
         <activity android:name=".Scanner" />

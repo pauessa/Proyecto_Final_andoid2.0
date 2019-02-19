@@ -18,6 +18,7 @@ public class Libro implements Serializable {
     private String genero;
     private int valoracionMedia;
     private int pos;
+    private int hojasleidas;
 
     public Libro() {
 
@@ -38,6 +39,14 @@ public class Libro implements Serializable {
         this.lengua = lengua;
         this.genero = genero;
         this.valoracionMedia = valoracionMedia;
+    }
+
+    public int getHojasleidas() {
+        return hojasleidas;
+    }
+
+    public void setHojasleidas(int hojasleidas) {
+        this.hojasleidas = hojasleidas;
     }
 
     public int getPos() {

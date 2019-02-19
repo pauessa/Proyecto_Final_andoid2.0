@@ -60,12 +60,19 @@ public class DialogoBorrar extends DialogFragment {
                 }).setNeutralButton("Cancelar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
                 dialog.cancel();
 
             }
         })
-                .setNegativeButton("Mover a leiendo", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Mover a leyendo", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
+                        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                        mDatabase = FirebaseDatabase.getInstance().getReference(); //Creamos una referencia al root de la base de datos
+                        String userID = mAuth.getCurrentUser().getUid();
+                        mDatabase.child("Usuarios").child(userID).child("LibrosLeyendo").child(l.getTitulo()).setValue(l);
+                        mDatabase.child("Usuarios").child(userID).child("LibrosDeseados").child(l.getTitulo()).setValue(null);
+
                         dialog.cancel();
 
 

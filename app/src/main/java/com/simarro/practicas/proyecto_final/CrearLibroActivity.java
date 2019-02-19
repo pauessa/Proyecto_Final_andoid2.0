@@ -217,10 +217,12 @@ public class CrearLibroActivity extends AppCompatActivity {
         switch (requestCode) {
 
             case COD_FOTO:
+                if (data.getExtras()!=null){
                 bitmap = (Bitmap) data.getExtras().get("data");
                 //imgFoto.setImageBitmap(bitmap);
                 Uri uri = data.getData();
-                uploadImage(bitmap,titulo);
+                uploadImage(bitmap, titulo);
+            }
                 break;
         }
     }
@@ -239,7 +241,7 @@ public class CrearLibroActivity extends AppCompatActivity {
         uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure( Exception exception) {
-                // Handle unsuccessful uploads
+                Toast.makeText(getBaseContext(),"foto no subida",Toast.LENGTH_SHORT).show();
             }
         }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
             @Override

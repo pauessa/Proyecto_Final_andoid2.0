@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-    android:id="@+id/action_settings"
+    android:id="@+id/action_desconectar"
     android:orderInCategory="100"
     android:title="@string/singOut"
     app:showAsAction="never" />
@@ -10,5 +10,10 @@
         android:id="@+id/action_mapa"
         android:orderInCategory="100"
         android:title="@string/mapa"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_preferencias"
+        android:orderInCategory="100"
+        android:title="@string/preferencias"
         app:showAsAction="never" />
 </menu>

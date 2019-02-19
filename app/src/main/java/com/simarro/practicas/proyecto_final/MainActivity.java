@@ -2,19 +2,16 @@ package com.simarro.practicas.proyecto_final;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.media.MediaScannerConnection;
+import android.content.pm.ResolveInfo;
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.support.annotation.Nullable;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -24,27 +21,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 import com.simarro.practicas.proyecto_final.pojo.Autor;
 import com.simarro.practicas.proyecto_final.pojo.Editorial;
 import com.simarro.practicas.proyecto_final.pojo.Libro;
-import com.squareup.picasso.Picasso;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -91,6 +81,12 @@ public class MainActivity extends AppCompatActivity
                     ft.replace(R.id.content_main, fragment);
                     ft.commit();
                     break;
+                case "LEYENDO":
+                    fragment = new Menu3();
+                    ft.replace(R.id.content_main, fragment);
+                    ft.commit();
+                    break;
+
                 default:
                     fragment = new Menu5();
                     ft.replace(R.id.content_main, fragment);
@@ -104,7 +100,7 @@ public class MainActivity extends AppCompatActivity
             ft.replace(R.id.content_main, fragment);
             ft.commit();
         }
-
+        comprobarIdioma();
 
     }
 
@@ -134,7 +130,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_desconectar) {
             FirebaseAuth.getInstance().signOut();
             Intent i = new Intent(this, LoginActivity.class);
             startActivity(i);
@@ -142,9 +138,25 @@ public class MainActivity extends AppCompatActivity
         }
         if (id == R.id.action_mapa) {
 
-            Intent i = new Intent(this, MapaActivity.class);
-            startActivity(i);
+            Uri location = Uri.parse(getString(R.string.coordenades));
+
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
+
+// Verify it resolves
+            PackageManager packageManager = getPackageManager();
+            List<ResolveInfo> activities = packageManager.queryIntentActivities(mapIntent, 0);
+            boolean isIntentSafe = activities.size() > 0;
+
+// Start an activity if it's safe
+            if (isIntentSafe) {
+                startActivity(mapIntent);
+            }
             return true;
+        }
+        if (id == R.id.action_preferencias) {
+            Intent i=new Intent(this,OpcionesActivity.class);
+            startActivity(i);
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -191,8 +203,27 @@ public class MainActivity extends AppCompatActivity
 
     public void anadir(View v) {
         if (checkPermission()) {
-            Intent intent = new Intent(this, Scanner.class);
-            startActivity(intent);
+            Intent intent;
+            switch (v.getId()){
+                case R.id.btnLeyendo:
+                     intent = new Intent(this, Scanner.class);
+                    intent.putExtra("TIPO","LEYENDO");
+                    startActivity(intent);
+                    break;
+                case R.id.btnLibros:
+                    intent = new Intent(this, Scanner.class);
+                    intent.putExtra("TIPO","LIBROS");
+                    startActivity(intent);
+                    break;
+
+                    default:
+                         intent = new Intent(this, Scanner.class);
+                        intent.putExtra("TIPO","otro");
+                        startActivity(intent);
+                        break;
+
+            }
+
         }
 
     }
@@ -255,5 +286,27 @@ public class MainActivity extends AppCompatActivity
     }
 
 
+    private void comprobarIdioma(){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        String idioma = prefs.getString("Idioma", "error");
+
+        if(!idioma.equals("error")){
+            if(idioma.equals("ESP")){
+                Locale localizacion = new Locale("es", "ES");
+                Locale.setDefault(localizacion);
+                Configuration config = new Configuration();
+                config.locale = localizacion;
+                getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+            }else{
+                Locale localizacion = new Locale("en", "US");
+                Locale.setDefault(localizacion);
+                Configuration config = new Configuration();
+                config.locale = localizacion;
+                getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+            }
+        }
+
+    }
 
 }

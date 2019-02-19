@@ -23,12 +23,15 @@ import me.dm7.barcodescanner.zxing.ZXingScannerView;
 public class DialogoScanner extends DialogFragment {
     Libro l;
     DatabaseReference mDatabase;
-
-    ZXingScannerView v;
+String tipo;
     public void setLibro(Libro l){
         this.l=l;
     }
 
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -46,25 +49,43 @@ public class DialogoScanner extends DialogFragment {
         TextView valoracion=view.findViewById(R.id.Valoracion);
         valoracion.setText(l.getValoracionMedia()+"/10");
         builder.setView(view)
-                .setTitle("Libro: "+l.getTitulo())
-                .setPositiveButton("Guardar en deseados", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-                        mDatabase = FirebaseDatabase.getInstance().getReference(); //Creamos una referencia al root de la base de datos
-                        String userID = mAuth.getCurrentUser().getUid();
-                        mDatabase.child("Usuarios").child(userID).child("LibrosDeseados").child(l.getTitulo()).setValue(l);
-                        Intent i=new Intent(getActivity(),MainActivity.class);
-                        i.putExtra("CAMBIO","DESEADOS");
-                        startActivity(i);
-                        dialog.cancel();
-                    }
-                })
-        .setNegativeButton("No guardar", new DialogInterface.OnClickListener() {
+                .setTitle("Libro: "+l.getTitulo());
+    if (tipo.equals("LEYENDO")) {
+        builder.setView(view).setPositiveButton("Guardar en leyendo", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                mDatabase = FirebaseDatabase.getInstance().getReference(); //Creamos una referencia al root de la base de datos
+                String userID = mAuth.getCurrentUser().getUid();
+                mDatabase.child("Usuarios").child(userID).child("LibrosLeyendo").child(l.getTitulo()).setValue(l);
+                Intent i = new Intent(getActivity(), MainActivity.class);
+                i.putExtra("CAMBIO", "LEYENDO");
+                startActivity(i);
+                dialog.cancel();
+            }
+        });
+    }else if(tipo.equals("LIBROS")){
+        
+    }else {
+        builder.setView(view).setPositiveButton("Guardar en deseados", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                FirebaseAuth mAuth = FirebaseAuth.getInstance();
+                mDatabase = FirebaseDatabase.getInstance().getReference(); //Creamos una referencia al root de la base de datos
+                String userID = mAuth.getCurrentUser().getUid();
+                mDatabase.child("Usuarios").child(userID).child("LibrosDeseados").child(l.getTitulo()).setValue(l);
+                Intent i = new Intent(getActivity(), MainActivity.class);
+                i.putExtra("CAMBIO", "DESEADOS");
+                startActivity(i);
+                dialog.cancel();
+            }
+        });
+
+    }
+        builder.setView(view).setNegativeButton("No guardar", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 dialog.cancel();
                 getActivity().onBackPressed();
-            }});
-
+            }
+        });
         return builder.create();
     }
 
