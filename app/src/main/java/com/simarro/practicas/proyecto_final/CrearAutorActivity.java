@@ -48,7 +48,6 @@ public class CrearAutorActivity extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                         month = month + 1;
-                        Log.d("ggg", "onDateSet: mm/dd/yyy: " + month + "/" + day + "/" + year);
                         String date = day + "/" + month + "/" + year;
                         fecha.setText(date);
                     }
@@ -70,9 +69,6 @@ public class CrearAutorActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         Libro l = new Libro("", new Autor(editTextNombre.getText().toString(), date1, Integer.parseInt(nlibros.getText().toString()), pais.getText().toString(), bio.getText().toString()), 0, getIntent().getStringExtra("ISBN"), new Editorial("",date1), date1, "", "", "", "", 0);
-        //l.setPortada(portada);
-
-
         mDatabase.child("Libros").child(l.getIsbn()).setValue(l);
         finish();
 

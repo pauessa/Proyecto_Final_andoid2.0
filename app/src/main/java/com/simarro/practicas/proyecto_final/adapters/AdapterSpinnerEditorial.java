@@ -41,8 +41,6 @@ public class AdapterSpinnerEditorial extends ArrayAdapter<Editorial> {
     }
 
 
-    // And the "magic" goes here
-    // This is for the "passive" state of the spinner
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         // I created a dynamic TextView here, but you can reference your own  custom layout for each spinner item

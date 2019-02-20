@@ -39,7 +39,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Saga:   "
+                android:text="@string/saga2"
                 android:textSize="24sp" />
 
             <TextView
@@ -60,7 +60,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Autor:   "
+                android:text="@string/autor2"
                 android:textSize="24sp" />
 
             <TextView
@@ -81,7 +81,7 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Nº Pag: "
+                android:text="@string/npag2"
                 android:textSize="24sp" />
 
             <TextView
@@ -102,7 +102,7 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Valoracion: "
+                android:text="@string/valoracion"
                 android:textSize="24sp" />
 
             <TextView

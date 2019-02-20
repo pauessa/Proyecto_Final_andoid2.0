@@ -36,7 +36,7 @@ String tipo;
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder =new AlertDialog.Builder(getActivity());
-        View view=getActivity().getLayoutInflater().inflate(R.layout.dialog_personal,null);
+        View view=getActivity().getLayoutInflater().inflate(R.layout.dialog_borrar,null);
 
         TextView saga=view.findViewById(R.id.txtSaga);
         saga.setText(l.getNombreSaga());

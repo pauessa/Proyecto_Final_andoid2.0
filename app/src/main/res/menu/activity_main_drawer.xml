@@ -7,19 +7,19 @@
         <item
             android:id="@+id/nav_menu1"
             android:icon="@drawable/leidos"
-            android:title="Leidos" />
+            android:title="@string/leidos" />
         <item
             android:id="@+id/nav_menu2"
             android:icon="@drawable/leyendo"
-            android:title="Leyendo" />
+            android:title="@string/leyendo" />
         <item
             android:id="@+id/nav_menu3"
             android:icon="@drawable/listadeseos"
-            android:title="Lista de deseos" />
+            android:title="@string/deseados" />
         <item
             android:id="@+id/nav_menu4"
             android:icon="@drawable/top"
-            android:title="Top libros" />
+            android:title="@string/todoslibros" />
 
     </group>
 

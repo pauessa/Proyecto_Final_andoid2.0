@@ -32,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Nombre"
+                android:hint="@string/nombre"
                 android:padding="10dp"
                 android:textColor="#000000"
                 android:background="#C7C7C7"
@@ -51,14 +51,14 @@
                     android:layout_height="wrap_content"
                     android:background="@color/colorAccent"
                     android:onClick="fecha"
-                    android:text="Fecha" />
+                    android:text="@string/fecha" />
 
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:text="Seleciona una fecha Nacimiento" />
+                    android:text="@string/selecionaFecha" />
             </LinearLayout>
 
 
@@ -76,7 +76,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginBottom="8dp"
                     android:onClick="cancelar"
-                    android:text="Cancelar"
+                    android:text="@string/cancelar"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
@@ -88,7 +88,7 @@
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:onClick="Crear"
-                    android:text="Crear"
+                    android:text="@string/crear"
                     android:background="@color/colorAccent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />

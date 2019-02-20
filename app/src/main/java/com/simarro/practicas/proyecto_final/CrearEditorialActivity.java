@@ -69,8 +69,6 @@ public class CrearEditorialActivity extends AppCompatActivity {
         }
         Autor a= (Autor) getIntent().getSerializableExtra("AUTOR");
         Libro l = new Libro("", a , 0, getIntent().getStringExtra("ISBN"), new Editorial(editTextNombre.getText().toString(),date1), date1, "", "", "", "", 0);
-        //l.setPortada(portada);
-
 
         mDatabase.child("Libros").child(l.getIsbn()).setValue(l);
         finish();

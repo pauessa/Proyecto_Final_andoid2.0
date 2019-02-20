@@ -19,4 +19,35 @@
     </string-array>
     <string name="preferencias">Preferencias</string>
 
+
+    <string name="nombre">Nombre</string>
+    <string name="fecha">Fecha</string>
+    <string name="selecionaFecha">Seleciona una fecha</string>
+    <string name="nescritos">Numero de libros escritos</string>
+    <string name="pais">Pais</string>
+    <string name="biografia">Biografia</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="crear">Crear</string>
+
+    <string name="titulo">Titulo</string>
+    <string name="saga">Saga</string>
+    <string name="autor">Autor</string>
+    <string name="subirportada">Subir portada</string>
+    <string name="sinopsis">Sinopsis</string>
+    <string name="npag">Numero de paginas</string>
+    <string name="editorial">Editorial</string>
+    <string name="lengua">Lengua</string>
+    <string name="genero">Genero</string>
+
+    <string name="saga2">Saga: \u0020</string>
+    <string name="autor2">Autor: \u0020</string>
+    <string name="npag2">Nº pag: \u0020</string>
+    <string name="valoracion">Valoracion: \u0020</string>
+
+    <string name="leidos">Leidos</string>
+    <string name="leyendo">Leyendo</string>
+    <string name="deseados">Lista de deseos</string>
+    <string name="todoslibros">Todos los libros"</string>
+
+
 </resources>

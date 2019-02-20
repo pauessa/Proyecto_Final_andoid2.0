@@ -305,9 +305,9 @@ public class CrearLibroActivity extends AppCompatActivity {
         Libro l = new Libro(txtTitulo.getText().toString(),autorSelecionado,Integer.parseInt(npag.getText().toString()), getIntent().getStringExtra("ISBN"), editorialSelecionada, date1, sinopsis.getText().toString()   , saga.getText().toString(), lengua.getText().toString(), genero.getText().toString(), (int)mRatingBar.getRating());
         l.setPortada(portada);
 
-
-
         mDatabase.child("Libros").child(l.getIsbn()).setValue(l);
+        Intent i=new Intent(this,MainActivity.class);
+        startActivity(i);
 
     }
 

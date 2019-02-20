@@ -63,8 +63,7 @@ public class Adapterleyendo extends RecyclerView.Adapter<Adapterleyendo.Librovie
         }
         libroviewholder.progressBar.setScaleY(3f);
 
-        Log.e("SANDRAA",l.getHojasleidas()+""+l.getTitulo());
-        //libroviewholder.progressBar.setProgress(l.getHojasleidas());
+
         libroviewholder.lineaLeidos.setOnClickListener(new View.OnClickListener() {
 
             @Override
