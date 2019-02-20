@@ -60,9 +60,9 @@ public class Menu3 extends Fragment {
                 AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
                 final EditText input = new EditText(getContext());
                 input.setInputType(InputType.TYPE_CLASS_NUMBER);
-                input.setHint("hint");
+                input.setHint("MAX="+item.getnPaginas()+")");
                 alertDialog.setTitle(item.getTitulo());
-                alertDialog.setMessage("Introduce numero de paginas leidas (MAX="+item.getnPaginas()+")");
+                alertDialog.setMessage("Introduce numero de paginas leidas");
                 alertDialog.setView(input);
                 alertDialog.setButton(DialogInterface.BUTTON_POSITIVE, "Aplicar", new DialogInterface.OnClickListener() {
                     @Override

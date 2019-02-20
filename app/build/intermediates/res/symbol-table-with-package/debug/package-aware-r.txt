@@ -1525,6 +1525,7 @@ layout dialog_personal
 layout item_deseados
 layout item_leyendo
 layout item_libros
+layout item_libros_leidos
 layout lista_deseos
 layout menu2
 layout menu3

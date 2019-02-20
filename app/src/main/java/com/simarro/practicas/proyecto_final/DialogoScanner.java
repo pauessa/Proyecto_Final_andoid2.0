@@ -47,7 +47,7 @@ String tipo;
         TextView npag=view.findViewById(R.id.Npag);
         npag.setText(Integer.toString(l.getnPaginas()));
         TextView valoracion=view.findViewById(R.id.Valoracion);
-        valoracion.setText(l.getValoracionMedia()+"/10");
+        valoracion.setText(l.getValoracionMedia()+"/5");
         builder.setView(view)
                 .setTitle("Libro: "+l.getTitulo());
     if (tipo.equals("LEYENDO")) {

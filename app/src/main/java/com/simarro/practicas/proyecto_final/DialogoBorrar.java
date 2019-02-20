@@ -44,7 +44,7 @@ public class DialogoBorrar extends DialogFragment {
         TextView npag=view.findViewById(R.id.Npag);
         npag.setText(Integer.toString(l.getnPaginas()));
         TextView valoracion=view.findViewById(R.id.Valoracion);
-        valoracion.setText(l.getValoracionMedia()+"/10");
+        valoracion.setText(l.getValoracionMedia()+"/5");
         builder.setView(view)
 
                 .setTitle("Libro: "+l.getTitulo())
@@ -70,6 +70,7 @@ public class DialogoBorrar extends DialogFragment {
                         FirebaseAuth mAuth = FirebaseAuth.getInstance();
                         mDatabase = FirebaseDatabase.getInstance().getReference(); //Creamos una referencia al root de la base de datos
                         String userID = mAuth.getCurrentUser().getUid();
+                        l.setHojasleidas(0);
                         mDatabase.child("Usuarios").child(userID).child("LibrosLeyendo").child(l.getTitulo()).setValue(l);
                         mDatabase.child("Usuarios").child(userID).child("LibrosDeseados").child(l.getTitulo()).setValue(null);
 
