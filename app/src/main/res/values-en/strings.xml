@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Proyecto_Final</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="singOut">LogOut</string>
+    <string name="mapa">Map</string>
+    <string name="coordenades">geo:38.9863333,-0.5373188,17?q=Institut+d\'Educació+Secundària+Dr.+Lluís+Simarro</string>
+    <string-array name="idiomas">
+        <item>Español</item>
+        <item>Ingles</item>
+    </string-array>
+    <string-array name="codigopais">
+        <item>ESP</item>
+        <item>FRA</item>
+        <item>ALE</item>
+    </string-array>
+    <string name="preferencias">Preferences</string>
+
+
+    <string name="nombre">Name</string>
+    <string name="fecha">Date</string>
+    <string name="selecionaFecha">Select a date</string>
+    <string name="nescritos">Number of books</string>
+    <string name="pais">City</string>
+    <string name="biografia">Biography</string>
+    <string name="cancelar">Cancel</string>
+    <string name="crear">Create</string>
+
+    <string name="titulo">Title</string>
+    <string name="saga">Saga</string>
+    <string name="autor">Author</string>
+    <string name="subirportada">Upload cover</string>
+    <string name="sinopsis">Synopsis</string>
+    <string name="npag">Number of pages</string>
+    <string name="editorial">Editorial</string>
+    <string name="lengua">Language</string>
+    <string name="genero">Genre</string>
+
+    <string name="saga2">Saga: \u0020</string>
+    <string name="autor2">Author: \u0020</string>
+    <string name="npag2">Nº pag: \u0020</string>
+    <string name="valoracion">Valuation: \u0020</string>
+
+    <string name="leidos">Read</string>
+    <string name="leyendo">Reading</string>
+    <string name="deseados">Wish list</string>
+    <string name="todoslibros">All books"</string>
+
+
+</resources>

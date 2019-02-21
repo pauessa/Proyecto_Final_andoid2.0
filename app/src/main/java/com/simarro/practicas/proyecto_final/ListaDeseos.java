@@ -15,6 +15,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.simarro.practicas.proyecto_final.Dialogos.DialogoBorrar;
 import com.simarro.practicas.proyecto_final.adapters.AdapterLeidos;
 import com.simarro.practicas.proyecto_final.pojo.Libro;
 
@@ -48,7 +49,6 @@ public class ListaDeseos extends Fragment {
             public void onItemClick(Libro item) {
                 DialogoBorrar dialogo = new DialogoBorrar();
                 dialogo.setLibro(item);
-
                 dialogo.show(getFragmentManager(), "ff");
             }
         });

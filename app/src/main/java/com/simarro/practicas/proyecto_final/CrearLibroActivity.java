@@ -1,7 +1,9 @@
 package com.simarro.practicas.proyecto_final;
 
+import android.Manifest;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -62,7 +64,7 @@ public class CrearLibroActivity extends AppCompatActivity {
     String titulo="";
     List<Autor> autores;
     List<Editorial> editoriales;
-
+    private final int REQUEST_CODE_ASK_PERMISSIONS = 123;
     Spinner spiner,spinerEditorial;
     private AdapterSpinner adapter;
     AdapterSpinnerEditorial adapterEditorial;
@@ -114,8 +116,7 @@ public class CrearLibroActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view,int position, long id) {
                 Autor a = adapter.getItem(position);
                 autorSelecionado=a;
-                Log.e("ASDASD",a.getNombre());
-                Toast.makeText(getBaseContext(), a.getNombre(),Toast.LENGTH_SHORT).show();
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapter) {
@@ -130,12 +131,10 @@ public class CrearLibroActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view,int position, long id) {
                 Editorial e = adapterEditorial.getItem(position);
                 editorialSelecionada=e;
-                Log.e("ASDASD",e.getNombre());
-                Toast.makeText(getBaseContext(), e.getNombre(),Toast.LENGTH_SHORT).show();
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapter) {
-                Log.e("ASDASD","nada");
 
             }
         });
@@ -160,6 +159,7 @@ public class CrearLibroActivity extends AppCompatActivity {
             genero.setText(l.getGenero());
             Picasso.get().load(l.getPortada()).into(imgFoto);
             portada=l.getPortada();
+            titulo=l.getTitulo();
         }
 
     }
@@ -202,9 +202,12 @@ public class CrearLibroActivity extends AppCompatActivity {
         }
 
         if (!titulo.equals("")) {
+            if(checkPermission()){
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent, COD_FOTO);
+            }
 
-            Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-            startActivityForResult(intent, COD_FOTO);
+
         }else{
             Toast.makeText(getBaseContext(), "tienes que introducir un titulo primero",Toast.LENGTH_SHORT).show();
 
@@ -300,14 +303,22 @@ public class CrearLibroActivity extends AppCompatActivity {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        Log.e("aaaaa",date1+"");
+        if(txtTitulo.getText().toString().equalsIgnoreCase("")||saga.getText().toString().equalsIgnoreCase("")
+                ||autorSelecionado==null||sinopsis.getText().toString().equalsIgnoreCase("")
+                ||npag.getText().toString().equalsIgnoreCase("")
+                ||fecha.getText().toString().equalsIgnoreCase("")
+                ||editorialSelecionada==null||lengua.getText().toString().equalsIgnoreCase("")
+                ||genero.getText().toString().equalsIgnoreCase("")||mRatingBar.getRating()==0){
 
-        Libro l = new Libro(txtTitulo.getText().toString(),autorSelecionado,Integer.parseInt(npag.getText().toString()), getIntent().getStringExtra("ISBN"), editorialSelecionada, date1, sinopsis.getText().toString()   , saga.getText().toString(), lengua.getText().toString(), genero.getText().toString(), (int)mRatingBar.getRating());
-        l.setPortada(portada);
+            Toast.makeText(getApplicationContext(),"Falta algun dato por poner",Toast.LENGTH_SHORT).show();
+        }else {
+            Libro l = new Libro(txtTitulo.getText().toString(), autorSelecionado, Integer.parseInt(npag.getText().toString()), getIntent().getStringExtra("ISBN"), editorialSelecionada, date1, sinopsis.getText().toString(), saga.getText().toString(), lengua.getText().toString(), genero.getText().toString(), (int) mRatingBar.getRating());
+            l.setPortada(portada);
 
-        mDatabase.child("Libros").child(l.getIsbn()).setValue(l);
-        Intent i=new Intent(this,MainActivity.class);
-        startActivity(i);
+            mDatabase.child("Libros").child(l.getIsbn()).setValue(l);
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+        }
 
     }
 
@@ -358,5 +369,44 @@ public class CrearLibroActivity extends AppCompatActivity {
         Editorial e=(Editorial) spinerEditorial.getSelectedItem();
         editorialSelecionada=e;
         Log.e("Autor",e.toString());
+    }
+
+
+    private boolean checkPermission() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            Toast.makeText(this, "This version is not Android 6 or later " + Build.VERSION.SDK_INT, Toast.LENGTH_LONG).show();
+        } else {
+            int hasWriteContactsPermission = checkSelfPermission(Manifest.permission.CAMERA);
+            if (hasWriteContactsPermission != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{Manifest.permission.CAMERA},
+                        REQUEST_CODE_ASK_PERMISSIONS);
+                Toast.makeText(this, "Requesting permissions", Toast.LENGTH_LONG).show();
+            } else if (hasWriteContactsPermission == PackageManager.PERMISSION_GRANTED) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (REQUEST_CODE_ASK_PERMISSIONS == requestCode) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "OK Permissions granted ! ", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Permissions are not granted ! " + Build.VERSION.SDK_INT, Toast.LENGTH_LONG).show();
+            }
+        } else {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent i =new Intent(this,MainActivity.class);
+        startActivity(i);
+        //super.onBackPressed();
     }
 }

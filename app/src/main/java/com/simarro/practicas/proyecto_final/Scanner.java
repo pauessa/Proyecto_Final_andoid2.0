@@ -16,6 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.zxing.Result;
+import com.simarro.practicas.proyecto_final.Dialogos.DialogoScanner;
 import com.simarro.practicas.proyecto_final.pojo.Libro;
 
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
@@ -48,8 +49,6 @@ public class Scanner extends AppCompatActivity implements ZXingScannerView.Resul
 
     private void mostrarLibro(final String text) {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
-
-
         mDatabase = FirebaseDatabase.getInstance().getReference(); //Creamos una referencia al root de la base de datos
         mDatabase.child("Libros").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -100,14 +99,10 @@ public class Scanner extends AppCompatActivity implements ZXingScannerView.Resul
     }
 
 
-
-
-
     @Override
     protected void onPause() {
         super.onPause();
         escanerView.startCamera();
-
     }
 
     @Override
@@ -126,9 +121,7 @@ public class Scanner extends AppCompatActivity implements ZXingScannerView.Resul
 
     public AlertDialog createSimpleDialog() {
 
-
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
         builder.setTitle("Error")
                 .setMessage("Libro no encontrado \n Quieres añadirlo a la base de datos?")
                 .setPositiveButton("Si",

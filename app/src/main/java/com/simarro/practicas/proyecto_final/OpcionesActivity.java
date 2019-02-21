@@ -2,6 +2,7 @@ package com.simarro.practicas.proyecto_final;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
@@ -22,5 +23,13 @@ public class OpcionesActivity extends PreferenceActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.opciones);
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent i =new Intent(this,MainActivity.class);
+        finishAffinity();
+        startActivity(i);
+
     }
 }

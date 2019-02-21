@@ -48,8 +48,12 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        comprobarIdioma();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -66,11 +70,7 @@ public class MainActivity extends AppCompatActivity
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
 
-        try {
-            generarLibrosDePrueba();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             Fragment fragment;
@@ -82,13 +82,13 @@ public class MainActivity extends AppCompatActivity
                     ft.commit();
                     break;
                 case "LEYENDO":
-                    fragment = new Menu3();
+                    fragment = new ListaLeyendo();
                     ft.replace(R.id.content_main, fragment);
                     ft.commit();
                     break;
 
                 default:
-                    fragment = new Menu5();
+                    fragment = new ListaTodos();
                     ft.replace(R.id.content_main, fragment);
                     ft.commit();
                     break;
@@ -96,11 +96,11 @@ public class MainActivity extends AppCompatActivity
 
 
         } else {
-            Fragment fragment = new Menu5();
+            Fragment fragment = new ListaTodos();
             ft.replace(R.id.content_main, fragment);
             ft.commit();
         }
-        comprobarIdioma();
+
 
     }
 
@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+            finishAffinity();
         }
     }
 
@@ -166,18 +167,18 @@ public class MainActivity extends AppCompatActivity
         Fragment fragment = null;
         switch (id) {
             case R.id.nav_menu1:
-                fragment = new Menu2();
+                fragment = new ListaLeidos();
 
                 break;
             case R.id.nav_menu2:
-                fragment = new Menu3();
+                fragment = new ListaLeyendo();
                 break;
             case R.id.nav_menu3:
                 fragment = new ListaDeseos();
 
                 break;
             case R.id.nav_menu4:
-                fragment = new Menu5();
+                fragment = new ListaTodos();
 
                 break;
 
@@ -240,11 +241,8 @@ public class MainActivity extends AppCompatActivity
                 Toast.makeText(this, "Requesting permissions", Toast.LENGTH_LONG).show();
             } else if (hasWriteContactsPermission == PackageManager.PERMISSION_GRANTED) {
                 return true;
-
             }
-
         }
-
         return false;
     }
 
@@ -263,27 +261,7 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    private void generarLibrosDePrueba() throws ParseException {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
-        String dateInString = "19-12-1975 10:20:56";
-        Date date = sdf.parse(dateInString);
-        dateInString = "19-12-1970 10:20:56";
-        Date date2 = sdf.parse(dateInString);
-        dateInString = "20-02-2008 10:20:56";
-        Date date3 = sdf.parse(dateInString);
-        Libro l = new Libro("El Imperio Final", new Autor("Brandon Sanderson", date, 170, "Estados unidos", "Brandon Sanderson, es un escritor estadounidense de literatura fantástica. Nacido en Nebraska, Es mormón. Actualmente reside en Provo, Utah, con su mujer Emily, con la que contrajo matrimonio el 7 de julio de 2006")
-                , 672, "9788417347291", new Editorial("NOVA", date2), date3, "Durante mil años han caído las cenizas y nada florece. Durante mil años los skaa han sido esclavizados y viven sumidos en un miedo inevitable. Durante mil años el Lord Legislador reina con un poder absoluto gracias al terror, a sus poderes y a su inmortalidad. Le ayudan «obligadores» e «inquisidores», junto a la poderosa magia de la «alomancia». Pero los nobles han tenido a menudo trato sexual con jóvenes skaa y, aunque la ley lo prohíbe, algunos de sus bastardos han sobrevivido y heredado los poderes alománticos: son los «nacidos de la bruma» ('mistborns'). Ahora, Kelsier, el «superviviente», el único que ha logrado huir de los Pozos de Hathsin, ha encontrado a Vin, una pobre chica skaa con mucha suerte… Tal vez los dos unidos a la rebelión que los skaa intentan desde hace mil años puedan cambiar el mundo y la atroz dominación del Lord Legislador."
-                , "Mistborn", "Español", "Fantasia", 5);
-        l.setPortada("https://firebasestorage.googleapis.com/v0/b/proyectofinal-3872c.appspot.com/o/Books%2FEl%20imperio%20final.jpg?alt=media&token=3a982bea-3349-485f-a0ab-49e2cf87c998");
-        DatabaseReference mDatabase;
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference(); //Creamos una referencia al root de la base de datos
 
-        mDatabase.child("Libros").child(l.getIsbn()).setValue(l);
-
-
-
-    }
 
 
     private void comprobarIdioma(){

@@ -2,6 +2,7 @@ package com.simarro.practicas.proyecto_final.adapters;
 
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.simarro.practicas.proyecto_final.R;
+import com.simarro.practicas.proyecto_final.SqlLite;
 import com.simarro.practicas.proyecto_final.pojo.Libro;
 import com.squareup.picasso.Picasso;
 
@@ -18,19 +20,21 @@ public class AdapterTodos extends RecyclerView.Adapter<AdapterTodos.Libroviewhol
 
     List<Libro> libros;
     private final OnItemClickListener listener;
-int pos;
+    int pos;
 
     public AdapterTodos(List<Libro> libros, OnItemClickListener listener) {
         this.libros = libros;
         this.listener=listener;
-
     }
+
+
 
     @Override
     public Libroviewholder onCreateViewHolder(ViewGroup viewGroup, int i) {
        View v= LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_libros,viewGroup,false);
        Libroviewholder holder=new Libroviewholder(v);
        return holder;
+
     }
 
     @Override
@@ -38,13 +42,20 @@ int pos;
         final Libro l=libros.get(i);
         l.setPos(i);
         libroviewholder.titulo.setText(l.getTitulo());
-        Picasso.get().load(l.getPortada()).into( libroviewholder.portada);
+
+        if(l.getPortada()==null){
+            Picasso.get().load(libroviewholder.db.getimage()).into( libroviewholder.portada);
+        }else{
+            Picasso.get().load(l.getPortada()).into( libroviewholder.portada);
+
+        }
         libroviewholder.autor.setText(l.getAutor().getNombre());
         libroviewholder.npag.setText(Integer.toString(l.getnPaginas()));
         String s="";
         for (int j = 0; j < l.getValoracionMedia(); j++) {
            s+="★";
         }
+
         libroviewholder.valoracion.setText(s);
         libroviewholder.lineaLeidos.setOnClickListener(new View.OnClickListener(){
 
@@ -64,6 +75,7 @@ int pos;
         TextView titulo,autor,npag,valoracion;
         ImageView portada;
         ConstraintLayout lineaLeidos;
+        SqlLite db;
         public Libroviewholder( View itemView) {
             super(itemView);
             titulo=itemView.findViewById(R.id.titulo);
@@ -72,6 +84,8 @@ int pos;
             npag=itemView.findViewById(R.id.npag);
             valoracion=itemView.findViewById(R.id.valoracion);
             lineaLeidos=itemView.findViewById(R.id.lineaLeidos);
+            db =new SqlLite(itemView.getContext(), "Imagensql", null, 1);
+
 
         }
     }

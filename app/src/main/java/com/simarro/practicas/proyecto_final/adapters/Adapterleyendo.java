@@ -4,7 +4,6 @@ import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.simarro.practicas.proyecto_final.Menu3;
 import com.simarro.practicas.proyecto_final.R;
 import com.simarro.practicas.proyecto_final.pojo.Libro;
 import com.squareup.picasso.Picasso;
@@ -50,7 +48,6 @@ public class Adapterleyendo extends RecyclerView.Adapter<Adapterleyendo.Librovie
             anim = new ProgressBarAnimation(libroviewholder.progressBar, 0, 0);
         }else{
             anim = new ProgressBarAnimation(libroviewholder.progressBar, 0, (l.getHojasleidas()*100)/l.getnPaginas());
-
         }
         anim.setDuration(1000);
         libroviewholder.progressBar.startAnimation(anim);
@@ -59,7 +56,6 @@ public class Adapterleyendo extends RecyclerView.Adapter<Adapterleyendo.Librovie
             libroviewholder.porcentaje2.setText("0%");
         }else{
             libroviewholder.porcentaje2.setText((l.getHojasleidas()*100)/l.getnPaginas()+"%");
-
         }
         libroviewholder.progressBar.setScaleY(3f);
 

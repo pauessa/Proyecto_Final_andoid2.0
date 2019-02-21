@@ -1525,9 +1525,9 @@ layout item_leyendo
 layout item_libros
 layout item_libros_leidos
 layout lista_deseos
-layout menu2
-layout menu3
-layout menu5
+layout lista_leidos
+layout lista_leyendo
+layout lista_todos
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout nav_header_main

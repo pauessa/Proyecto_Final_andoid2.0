@@ -5597,9 +5597,9 @@ public final class R {
     public static final int item_libros=0x7f0c0035;
     public static final int item_libros_leidos=0x7f0c0036;
     public static final int lista_deseos=0x7f0c0037;
-    public static final int menu2=0x7f0c0038;
-    public static final int menu3=0x7f0c0039;
-    public static final int menu5=0x7f0c003a;
+    public static final int lista_leidos=0x7f0c0038;
+    public static final int lista_leyendo=0x7f0c0039;
+    public static final int lista_todos=0x7f0c003a;
     public static final int mtrl_layout_snackbar=0x7f0c003b;
     public static final int mtrl_layout_snackbar_include=0x7f0c003c;
     public static final int nav_header_main=0x7f0c003d;
